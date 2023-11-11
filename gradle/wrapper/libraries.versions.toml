@@ -1,0 +1,141 @@
+[versions]
+minSdk = "21"
+compileSdk = "34"
+targetSdk = "34"
+kotlin = "1.9.0"
+ksp = "1.9.10-1.0.13"
+appcompat = "1.7.0-alpha03"
+androidx = "1.12.0"
+composeCompiler = "1.5.0"
+composeUi = "1.3.3"
+composeBom = "2023.10.01"
+activityVersion = "1.8.0"
+constrainLayout = "1.0.1"
+navigationCompose = "2.7.4"
+hilt = "2.48.1"
+hiltNav = "1.0.0"
+coroutine = "1.7.3"
+ktxSerialization = "1.6.0"
+coilCompose = "2.4.0"
+accompanist = "0.32.0"
+appUpdates = "2.1.0"
+androidxBrowser = "1.6.0"
+multidex = "2.0.1"
+firebase = "32.4.1"
+lifecycle = "2.6.2"
+room = "2.6.0"
+crypto = "1.1.0-alpha06"
+sqlcipher = "4.5.4"
+safetynet = "18.0.1"
+integrity = "1.2.0"
+jose4j = "0.9.3"
+workManager = "2.8.1"
+gradlePlugin = "8.1.2"
+googleServices = "4.3.15"
+crashlyticsPlugin = "2.9.2"
+kotlinDslPlugin = "4.0.7"
+retrofit = "2.9.0"
+ktxSerConverter = "1.0.0"
+timber = "5.0.1"
+junit = "4.13.2"
+robolectric = "4.10.3"
+espresso = "3.5.1"
+truth = "1.1.5"
+mockito = "5.2.0"
+okhttp3 = "4.10.0"
+mockWebServer = "5.0.0-alpha.11"
+androidxJunit = "1.1.5"
+location = "21.0.1"
+rootbeer = "0.1.0"
+splashScreen = "1.0.1"
+codeScanner = "16.1.0"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+appcompat-resources = { module = "androidx.appcompat:appcompat-resources", version.ref = "appcompat" }
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityVersion" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-runtime = { module = "androidx.compose.runtime:runtime" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+compose-constraintlayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constrainLayout" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+material = { module = "androidx.compose.material:material" }
+material3 = { module = "androidx.compose.material3:material3" }
+lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltNav" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNav" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+app-update = { module = "com.google.android.play:app-update-ktx", version.ref = "appUpdates" }
+browser = { module = "androidx.browser:browser", version.ref = "androidxBrowser" }
+multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+room = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+security-crypto-ktx = { module = "androidx.security:security-crypto-ktx", version.ref = "crypto" }
+sqlcipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "sqlcipher" }
+safetynet = { module = "com.google.android.gms:play-services-safetynet", version.ref = "safetynet" }
+play-integrity = { module = "com.google.android.play:integrity", version.ref = "integrity" }
+jose4j = { group = "org.bitbucket.b_c", name = "jose4j", version.ref = "jose4j" }
+rootbeer = { module = "com.scottyab:rootbeer-lib", version.ref = "rootbeer" }
+work-manager = { module = "androidx.work:work-runtime-ktx", version.ref = "workManager" }
+hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hiltNav" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutine" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "ktxSerialization" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging-ktx" }
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "ktxSerConverter" }
+retrofit-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp3" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "location" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
+splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+code-scanner = { module = "com.google.android.gms:play-services-code-scanner", version.ref = "codeScanner" }
+
+#Test Libraries
+junit = { module = "junit:junit", version.ref = "junit" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutine" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutine" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+google-truth = { module = "com.google.truth:truth", version.ref = "truth" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
+androidx-Junit = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
+mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "mockWebServer" }
+room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
+espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+test-compose-ui = { module = "androidx.compose.ui:ui-test-junit4" }
+test-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+test-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+
+[bundles]
+appcompat = ["appcompat", "appcompat-resources"]
+compose = ["activity-compose", "compose-ui", "compose-tooling", "compose-runtime", "compose-animation", "material", "material3", "compose-constraintlayout"]
+firebase = ["firebase-crashlytics", "firebase-messaging", "firebase-auth"]
+retrofit = ["retrofit", "retrofit-converter", "retrofit-interceptor"]
+room = ["room", "room-ktx", "sqlcipher", "security-crypto-ktx"]
+lifecycle = ["lifecycle", "lifecycle-process"]
+workManager = ["work-manager", "hilt-work"]
+security = ["safetynet", "play-integrity", "jose4j", "rootbeer"]
+domain-test = ["junit", "coroutines-android", "coroutines-test", "robolectric", "google-truth", "mockito-inline"]
+data-test = ["mockito-inline", "google-truth", "mockwebserver"]
+app-test = ["mockito-inline", "google-truth"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "gradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-dsl = { id = "org.gradle.kotlin.kotlin-dsl", version.ref = "kotlinDslPlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlyticsPlugin" }
