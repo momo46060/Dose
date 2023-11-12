@@ -1,8 +1,5 @@
 package com.m.dose.ui.screens
 
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.State
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.m.domain.model.Medecin
 import com.m.domain.model.Resource
