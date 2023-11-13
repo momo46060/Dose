@@ -11,6 +11,12 @@ val Pink80 = Color(0xFFEFB8C8)
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
+val Blue = Color(0xFF095d7e)
+val darkBlue = Color(0xFF0d425d)
+val darkBackgroundBlue = Color(0xFF104C6B)
+val BlueLight = Color(0xFF00ACB1)
+val heighLight = Color(0xFFccecee)
+val contentBackGround = Color(0xFFf1f9ff)
 
 
 
@@ -18,3 +24,18 @@ val Pink40 = Color(0xFF7D5260)
 val ShdowColor: Color
     @Composable
     get() = if (isSystemInDarkTheme()) Color.White else Color.LightGray
+val navbarbackground: Color
+    @Composable
+    get() = if (!isSystemInDarkTheme()) Color.White else darkBlue
+val statusbarbackground: Color
+    @Composable
+    get() = if (!isSystemInDarkTheme()) Blue else Blue
+val tabbarcontentcolor: Color
+    @Composable
+    get() = if (isSystemInDarkTheme())  Color.White else darkBlue
+val tabbarcontentBackground: Color
+    @Composable
+    get() = if (!isSystemInDarkTheme())  Color.White else darkBlue
+val Background: Color
+    @Composable
+    get() = if (!isSystemInDarkTheme())  Color.White else darkBackgroundBlue

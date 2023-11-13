@@ -1,6 +1,5 @@
 package com.m.dose
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
@@ -15,25 +14,29 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import com.m.dose.ui.screens.MainView
 import com.m.dose.ui.theme.DoseTheme
+import com.m.dose.ui.theme.navbarbackground
+import com.m.dose.ui.theme.statusbarbackground
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.light(
-                Color.TRANSPARENT, Color.TRANSPARENT
-            ),
-            navigationBarStyle = SystemBarStyle.light(
-                Color.TRANSPARENT, Color.TRANSPARENT
-            )
-        )
         super.onCreate(savedInstanceState)
         setContent {
             DoseTheme {
+                enableEdgeToEdge(
+                    statusBarStyle = SystemBarStyle.light(
+                        statusbarbackground.toArgb(), statusbarbackground.toArgb()
+                    ),
+                    navigationBarStyle = SystemBarStyle.light(
+                        navbarbackground.toArgb(), navbarbackground.toArgb()
+                    )
+                )
+
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize()

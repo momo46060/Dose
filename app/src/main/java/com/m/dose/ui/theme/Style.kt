@@ -8,7 +8,7 @@ import androidx.compose.ui.unit.sp
 
 val titleStyle = TextStyle(
     fontSize = 20.sp,
-    color = Color.Black,
+    color = BlueLight,
     textAlign = TextAlign.Start,
     fontWeight = FontWeight.Bold,
 )
