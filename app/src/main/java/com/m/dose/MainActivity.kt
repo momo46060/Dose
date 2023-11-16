@@ -18,8 +18,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import com.m.dose.ui.screens.MainView
 import com.m.dose.ui.theme.DoseTheme
+import com.m.dose.ui.theme.TopAppBarBackGround
 import com.m.dose.ui.theme.navbarbackground
-import com.m.dose.ui.theme.statusbarbackground
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
             DoseTheme {
                 enableEdgeToEdge(
                     statusBarStyle = SystemBarStyle.light(
-                        statusbarbackground.toArgb(), statusbarbackground.toArgb()
+                        TopAppBarBackGround.toArgb(), TopAppBarBackGround.toArgb()
                     ),
                     navigationBarStyle = SystemBarStyle.light(
                         navbarbackground.toArgb(), navbarbackground.toArgb()

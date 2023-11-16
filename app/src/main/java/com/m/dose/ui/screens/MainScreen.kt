@@ -33,13 +33,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.m.dose.ui.screens.search.SearchScreen
 import com.m.dose.ui.theme.Background
 import com.m.dose.ui.theme.Blue
-import com.m.dose.ui.theme.darkBackgroundBlue
+import com.m.dose.ui.theme.TopAppBarBackGround
+import com.m.dose.ui.theme.backGroundtintColor
+import com.m.dose.ui.theme.darkBackgroundgray
 import com.m.dose.ui.theme.tabbarcontentBackground
-import com.m.dose.ui.theme.tabbarcontentcolor
-import com.m.dose.utils.S_PADDING
+import com.m.dose.utils.L_PADDING
 import com.m.dose.utils.TabItem
 
 
@@ -73,16 +76,22 @@ fun MainView(
             selectedIndex = pagerstate.currentPage
         }
     }
-
     Scaffold(
         topBar = {
             TopAppBar(
                 colors = TopAppBarDefaults.smallTopAppBarColors(
-                    containerColor = Blue,
+                    containerColor = TopAppBarBackGround,
                 ),
-                title = { Text(text = "Dose", color = Color.White) },
+                title = {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        text = "Dose",
+                        color = Color.White,
+                        textAlign = TextAlign.Left
+                    )
+                },
                 navigationIcon = {
-                    Spacer(modifier = Modifier.width(S_PADDING))
+                    Spacer(modifier = Modifier.width(L_PADDING))
                 },
             )
         },
@@ -90,26 +99,27 @@ fun MainView(
             TabRow(selectedTabIndex = selectedIndex, indicator = {
             }) {
                 tabItems.forEachIndexed { index, tabItem ->
-                    Tab(modifier = Modifier.background(tabbarcontentBackground),
+                    Tab(
+                        modifier = Modifier.background(tabbarcontentBackground),
                         selected = index == selectedIndex,
                         onClick = { selectedIndex = index },
                         text = {
                             Text(
                                 text = tabItem.title,
-                                color = tabbarcontentcolor
+                                color = backGroundtintColor
                             )
                         },
                         icon = {
                             Icon(
                                 imageVector = if (index == selectedIndex) tabItem.unselectedImage else tabItem.selectedImage,
                                 contentDescription = null,
-                                tint = tabbarcontentcolor
+                                tint = backGroundtintColor
                             )
                         },
                         selectedContentColor = Blue,
                         unselectedContentColor = Color.Gray,
 
-                    )
+                        )
 
                 }
             }
@@ -117,13 +127,20 @@ fun MainView(
     ) { paddingValues ->
         HorizontalPager(
             state = pagerstate,
-            modifier = Modifier.background(darkBackgroundBlue)
+            modifier = Modifier
+                .background(darkBackgroundgray)
                 .fillMaxWidth()
                 .padding(paddingValues)
         ) { index ->
-            Box(modifier = Modifier.background(Background).fillMaxSize()) {
-                Text(text = tabItems[index].title)
+            if (index == 0) {
+                SearchScreen(modifier = Modifier.background(Background))
+            } else {
+                Box(modifier = Modifier
+                    .background(Background)
+                    .fillMaxSize()) {
+                    Text(text = tabItems[index].title)
 
+                }
             }
 
 
