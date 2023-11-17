@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dose</string>
+    <string name="Trade_Name">الاسم التجارى</string>
+    <string name="Generic_name">الاسم العام </string>
+    <string name="The_company">الشركه</string>
+    <string name="confirm">تاكيد</string>
+</resources>

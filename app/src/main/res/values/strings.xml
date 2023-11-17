@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Dose</string>
+    <string name="Trade_Name">Trade Name\n</string>
+    <string name="Generic_name">Generic name\n</string>
+    <string name="The_company">The company</string>
+    <string name="confirm">Confirm</string>
 </resources>
