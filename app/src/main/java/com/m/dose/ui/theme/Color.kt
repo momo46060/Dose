@@ -21,7 +21,17 @@ val contentBackGround = Color(0xFFf1f9ff)
 
 
 
-
+val colorShimmer: List<Color>
+    @Composable
+    get() = if (isSystemInDarkTheme()) listOf(
+        darkGray.copy(alpha = 0.9f),
+        darkGray.copy(alpha = 0.2f),
+        darkGray.copy(alpha = 0.9f),
+    ) else listOf(
+        BlueLight.copy(alpha = 0.8f),
+        BlueLight.copy(alpha = 0.2f),
+        BlueLight.copy(alpha = 0.8f),
+    )
 val ShdowColor: Color
     @Composable
     get() = if (isSystemInDarkTheme()) Color.White else Color.LightGray
@@ -36,19 +46,19 @@ val statusbarbackground: Color
     get() = if (!isSystemInDarkTheme()) Blue else Blue
 val tabbarcontentcolor: Color
     @Composable
-    get() = if (isSystemInDarkTheme())  Color.White else darkGray
+    get() = if (isSystemInDarkTheme()) Color.White else darkGray
 val tabbarcontentBackground: Color
     @Composable
-    get() = if (!isSystemInDarkTheme())  Color.White else darkGray
+    get() = if (!isSystemInDarkTheme()) Color.White else darkGray
 val Background: Color
     @Composable
-    get() = if (!isSystemInDarkTheme())  Color.White else darkBackgroundgray
+    get() = if (!isSystemInDarkTheme()) Color.White else darkBackgroundgray
 val TopAppBarBackGround: Color
     @Composable
-    get() = if (!isSystemInDarkTheme())  BlueLight else darkGray
+    get() = if (!isSystemInDarkTheme()) BlueLight else darkGray
 val backGroundtintColor: Color
     @Composable
-    get() = if (!isSystemInDarkTheme())  BlueLight else Color.White
+    get() = if (!isSystemInDarkTheme()) darkGray else Color.White
 val CardBackground: Color
     @Composable
-    get() = if (!isSystemInDarkTheme())  lightblue else darkGray
+    get() = if (!isSystemInDarkTheme()) lightblue else darkGray
