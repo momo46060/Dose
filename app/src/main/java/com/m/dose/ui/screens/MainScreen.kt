@@ -125,6 +125,7 @@ fun MainView(
             }
         }
     ) { paddingValues ->
+
         HorizontalPager(
             state = pagerstate,
             modifier = Modifier
@@ -139,18 +140,12 @@ fun MainView(
                     .background(Background)
                     .fillMaxSize()) {
                     Text(text = tabItems[index].title)
-
                 }
             }
-
-
         }
 
-
     }
-
 }
-
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
