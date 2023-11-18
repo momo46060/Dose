@@ -16,11 +16,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Divider
@@ -51,7 +53,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -147,19 +148,18 @@ fun SearchScreen(
                 }),
             leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = null) },
             trailingIcon = {
-                Icon(modifier = Modifier
-                    .height(40.dp)
-                    .graphicsLayer(alpha = 0.99f)
-                    .drawWithCache {
-                        onDrawWithContent {
-                            drawContent()
-                            drawRect(brush, blendMode = BlendMode.SrcAtop)
-                        }
-                    }
-                    .clickable {
-                        focusManager.clearFocus(true)
+                 Icon(modifier = Modifier .height(40.dp).width(35.dp)
+                     .graphicsLayer(alpha = 0.99f)
+                     .drawWithCache {
+                         onDrawWithContent {
+                             drawContent()
+                             drawRect(brush, blendMode = BlendMode.SrcAtop)
+                         }
+                     }.clickable {
+                    focusManager.clearFocus(true)
                         showSheet = true
-                    }  , painter = painterResource(id = R.drawable.filtters), contentDescription = null)
+                }, imageVector = Icons.Default.FilterList, contentDescription = null)
+
             },
             textStyle = TextStyle(color = textColor, textAlign = TextAlign.Left),
             label = {
@@ -235,8 +235,7 @@ fun BottomSheet(onDismiss: () -> Unit, onSelect: (String) -> Unit) {
                 .fillMaxWidth()) {
                 Text(modifier = Modifier
                     .clip(RoundedCornerShape(L_PADDING))
-                    .fillMaxWidth(), text = stringResource(R.string.confirm), style = TextStyle(
-                    color = textColor,
+                    .fillMaxWidth(), color = textColor ,text = stringResource(R.string.confirm), style = TextStyle(
                     fontSize = 20.sp,
                     textAlign = TextAlign.Center
                 ))

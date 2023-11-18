@@ -54,6 +54,7 @@ android {
 dependencies {
     api(project(":data"))
     api(project(":domain"))
+    implementation("androidx.core:core-splashscreen:1.0.1")
     implementation ("androidx.compose.material3:material3:1.2.0-alpha02")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
