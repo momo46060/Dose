@@ -164,7 +164,7 @@ fun SearchScreen(
             textStyle = TextStyle(color = textColor, textAlign = TextAlign.Left),
             label = {
                 Text(
-                    text = "Search for drugs",
+                    text = stringResource(R.string.search_for_drugs),
                     style = TextStyle(color = textColor, textAlign = TextAlign.Left)
                 )
             })
@@ -220,7 +220,9 @@ fun BottomSheet(onDismiss: () -> Unit, onSelect: (String) -> Unit) {
                     )
 
                 }
-                Divider(modifier = Modifier.fillMaxWidth().height(1.dp))
+                Divider(modifier = Modifier
+                    .fillMaxWidth()
+                    .height(1.dp))
 
             }
 
