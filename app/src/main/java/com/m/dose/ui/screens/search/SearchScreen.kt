@@ -209,10 +209,9 @@ fun BottomSheet(onDismiss: () -> Unit, onSelect: (String) -> Unit) {
                     Text(
                         text = text,
                         modifier = Modifier
-
                             .fillMaxWidth(0.32f)
                             .padding(start = 5.dp, top = 16.dp),
-                        color = Color.White,
+                        color = textColor,
                         fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                         fontWeight = FontWeight.Normal,
                         textAlign = TextAlign.Center,
@@ -235,8 +234,9 @@ fun BottomSheet(onDismiss: () -> Unit, onSelect: (String) -> Unit) {
                 .fillMaxWidth()) {
                 Text(modifier = Modifier
                     .clip(RoundedCornerShape(L_PADDING))
-                    .fillMaxWidth(), color = textColor ,text = stringResource(R.string.confirm), style = TextStyle(
+                    .fillMaxWidth(),text = stringResource(R.string.confirm), style = TextStyle(
                     fontSize = 20.sp,
+                    color = Color.White,
                     textAlign = TextAlign.Center
                 ))
             }

@@ -28,9 +28,9 @@ val colorShimmer: List<Color>
         darkGray.copy(alpha = 0.2f),
         darkGray.copy(alpha = 0.9f),
     ) else listOf(
-        BlueLight.copy(alpha = 0.8f),
-        BlueLight.copy(alpha = 0.2f),
-        BlueLight.copy(alpha = 0.8f),
+        BlueLight.copy(alpha = 0.99f),
+        BlueLight.copy(alpha = 0.1f),
+        BlueLight.copy(alpha = 0.99f),
     )
 val ShdowColor: Color
     @Composable
